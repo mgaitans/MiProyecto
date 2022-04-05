@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "ee48352b-fab9-477c-b3bb-8716a3e49017",
+		"name": "DevOps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nuevo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMjU3MSwianRpIjoiZjJlNmVhMmQtYzZiMS00NzU2LTg0YTktYzg4ZGExOWJhMTRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEyNTcxLCJleHAiOjE2NDkxMTM0NzF9.rn-d0q6YVrA9rfiBuDEUb_ShRmIvUI6h5AxesU06Ko4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"magasa140@hotmail.com\",\r\n    \"app_uuid\": \"MOVIL\",\r\n    \"blocked_reason\": \"Prueba e integracion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}/blacklists",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"blacklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Existente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMjU3MSwianRpIjoiZjJlNmVhMmQtYzZiMS00NzU2LTg0YTktYzg4ZGExOWJhMTRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEyNTcxLCJleHAiOjE2NDkxMTM0NzF9.rn-d0q6YVrA9rfiBuDEUb_ShRmIvUI6h5AxesU06Ko4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{server}}/blacklists",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"blacklists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar lista",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMzkxOSwianRpIjoiZTY1Mzk3YzUtNTE1Mi00NTdiLTgwOGYtNTliN2EyODc4MWU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEzOTE5LCJleHAiOjE2NDkxMTQ4MTl9.hL87fni4CTVkRX1fpUX2UPsEz1KLUbPgg7aoHenZ1LU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{protocol}}://{{server}}/blacklist/magasa130@hotmail.com",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"blacklist",
+						"magasa130@hotmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token de acceso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{server}}/tokenacceso",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"tokenacceso"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "protocol",
+			"value": "http",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
