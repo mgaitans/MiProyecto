@@ -1,0 +1,7 @@
+{
+    "host":"database-lobosalfadinamita.csoc0hfub2eu.us-east-1.rds.amazonaws.com",
+    "database":"listanegra",
+    "user":"postgres",
+    "password":"rdslad202212",
+    "port":5432
+}
