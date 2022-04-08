@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ee48352b-fab9-477c-b3bb-8716a3e49017",
+		"_postman_id": "ca727a8f-f3f0-4c0b-9b94-e4dce57c31cd",
 		"name": "DevOps",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,13 +12,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMjU3MSwianRpIjoiZjJlNmVhMmQtYzZiMS00NzU2LTg0YTktYzg4ZGExOWJhMTRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEyNTcxLCJleHAiOjE2NDkxMTM0NzF9.rn-d0q6YVrA9rfiBuDEUb_ShRmIvUI6h5AxesU06Ko4",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"magasa140@hotmail.com\",\r\n    \"app_uuid\": \"MOVIL\",\r\n    \"blocked_reason\": \"Prueba e integracion\"\r\n}",
+					"raw": "{\r\n    \"email\": \"magasa140@hotmail.com\",\r\n    \"app_uuid\": \"MOVIL\",\r\n    \"blocked_reason\": \"Prueba de integracion\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,7 +45,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMjU3MSwianRpIjoiZjJlNmVhMmQtYzZiMS00NzU2LTg0YTktYzg4ZGExOWJhMTRlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEyNTcxLCJleHAiOjE2NDkxMTM0NzF9.rn-d0q6YVrA9rfiBuDEUb_ShRmIvUI6h5AxesU06Ko4",
+						"value": "{{token}}",
 						"type": "text"
 					}
 				],
@@ -147,9 +147,9 @@
 			"type": "string"
 		},
 		{
+			"key": "token",
 			"value": "",
-			"type": "string",
-			"disabled": true
+			"type": "string"
 		}
 	]
 }
