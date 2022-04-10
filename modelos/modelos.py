@@ -18,7 +18,7 @@ class Blacklists(db.Model):
     app_uuid = db.Column(db.Enum(App_uuid))            ###el id de la app cliente (es un UUID obligatorio)
     blocked_reason = db.Column(db.String(255))  ###el motivo por el que se agrega a la lista negra (campo opcional de máximo 255 caracteres)
     ip_adress = db.Column(db.String(128), nullable = False, default = socket.gethostbyname(socket.gethostname()))
-    date_time = db.Column(db.DateTime, nullable = False, default = datetime.now()) 
+    date_time = db.Column(db.DateTime(timezone=True), nullable = False, default = datetime.now())
        
     ##def __repr__(self) -> str:
     ##    return "{}-{}-{}".format(self.email, self.app_uuid, self.blocked_reason )*/

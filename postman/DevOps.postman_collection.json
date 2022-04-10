@@ -12,13 +12,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "{{token}}",
+						"value": "Bearer {{token}}",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"magasa140@hotmail.com\",\r\n    \"app_uuid\": \"MOVIL\",\r\n    \"blocked_reason\": \"Prueba de integracion\"\r\n}",
+					"raw": "{\r\n    \"email\": \"magasa160@hotmail.com\",\r\n    \"app_uuid\": \"MOVIL\",\r\n    \"blocked_reason\": \"Prueba de integracion\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,7 +45,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "{{token}}",
+						"value": "Bearer {{token}}",
 						"type": "text"
 					}
 				],
@@ -69,19 +69,19 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY0OTExMzkxOSwianRpIjoiZTY1Mzk3YzUtNTE1Mi00NTdiLTgwOGYtNTliN2EyODc4MWU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluIiwibmJmIjoxNjQ5MTEzOTE5LCJleHAiOjE2NDkxMTQ4MTl9.hL87fni4CTVkRX1fpUX2UPsEz1KLUbPgg7aoHenZ1LU",
+						"value": "Bearer {{token}}",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "{{protocol}}://{{server}}/blacklist/magasa130@hotmail.com",
+					"raw": "{{protocol}}://{{server}}/blacklist/magasa140@hotmail.com",
 					"protocol": "{{protocol}}",
 					"host": [
 						"{{server}}"
 					],
 					"path": [
 						"blacklist",
-						"magasa130@hotmail.com"
+						"magasa140@hotmail.com"
 					]
 				}
 			},

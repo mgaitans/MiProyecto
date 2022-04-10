@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask_restful import Resource
 from modelos import db, Blacklists, BlacklistsSchema
 from flask import request
@@ -23,7 +24,7 @@ class VistaBlacklists(Resource):
         if len(email_exist) > 0:
             return{"mensaje":"El email a ingresar en la lista negra ya existe. No se puede registrar de nuevo.","datos":0}, 400
         else:
-            add_blacklist = Blacklists(email=request.json['email'], app_uuid=request.json['app_uuid'], blocked_reason=request.json['blocked_reason'])
+            add_blacklist = Blacklists(email=request.json['email'], app_uuid=request.json['app_uuid'], blocked_reason=request.json['blocked_reason'], date_time=datetime.now())
             db.session.add(add_blacklist)
             db.session.commit()
             return {"mensaje":"email se agrego a la lista negra de manera exitosa.", "datos":blacklists_schema.dump(add_blacklist)}, 200
