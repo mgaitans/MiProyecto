@@ -39,4 +39,9 @@ class VistaBlacklist(Resource):
             return{"mensaje":"email " + email + " existente en la lista negra. ", "datos":0 }, 200
         else:
             return{"mensaje":"email " + email + " no existente en la lista negra. ","datos":0}, 400
-    
+
+
+class Test(Resource):
+    def get(self):
+        return{"mensaje":"Auuuuuuuuu" }, 200
+       

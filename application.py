@@ -2,7 +2,7 @@ from flask import Flask
 from config import create_app
 from modelos import db, Blacklists, BlacklistsSchema, App_uuid
 from flask_restful import Api  
-from vistas import VistaBlacklists, VistaBlacklist, VistaTokenacceso
+from vistas import VistaBlacklists, VistaBlacklist, VistaTokenacceso, Test
 from flask_jwt_extended import JWTManager
 import json
 
@@ -15,6 +15,7 @@ api = Api(application)
 api.add_resource(VistaBlacklists, '/blacklists')
 api.add_resource(VistaBlacklist, '/blacklist/<email>') ##/blacklists/<string:email>
 api.add_resource(VistaTokenacceso, '/tokenacceso')
+api.add_resource(Test, '/ping')
 jwt = JWTManager(application)
 
 if __name__ == "__main__":
